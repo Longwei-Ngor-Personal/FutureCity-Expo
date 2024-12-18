@@ -1,0 +1,495 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+:root {
+    --electric-blue: #4831D4;
+    --lime-green: #CCF381;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+/* Header */
+header {
+    background-color: var(--electric-blue);
+    color: var(--white);
+    padding: 20px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-separator {
+    height: 2px;
+    background-color: var(--white);
+    margin: 10px 0;
+}
+
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info span {
+    margin-left: 10px;
+    color: var(--white);
+}
+
+.social-icon {
+    background-color: var(--white);
+    color: var(--electric-blue);
+    padding: 5px;
+    border-radius: 50%;
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    position: relative;
+    min-width: 100%;
+    display: none;
+    padding: 100px 20px;
+}
+
+.carousel-slide:first-child {
+    display: block;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Image is below text */
+}
+
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    z-index: 2; /* Text is above the image */
+    width: 100%; /* Ensure the text spans the full width */
+    text-align: center;
+}
+
+.carousel-controls button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--electric-blue);
+    color: var(--white);
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 3; /* Ensure the controls are above the image */
+}
+
+.carousel-controls .prev {
+    left: 10px;
+}
+
+.carousel-controls .next {
+    right: 10px;
+}
+
+.carousel-dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* General Styling */
+.basic-info {
+    background-color: var(--white);
+    color: var(--electric-blue);
+    text-align: center; /* Center aligns all text */
+    padding: 40px 20px;
+}
+
+/* Container for logo and expo details */
+.info-container {
+    display: flex;
+    flex-direction: column; /* Stack logo and text vertically */
+    align-items: center;    /* Center content horizontally */
+    gap: 10px;
+}
+
+/* Logo styling */
+.logo {
+    max-width: 100px; /* Adjust logo size */
+    height: auto;
+}
+
+/* Expo details text */
+.expo-details p {
+    font-weight: bold;
+    margin: 5px 0; /* Adjust spacing between lines */
+    font-size: 16px;
+    color: var(--electric-blue);
+    text-align: left;
+}
+
+/* Title style for Expo Details */
+.expo-details .title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--electric-blue);
+}
+
+/* Button Container */
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 20px;
+}
+
+/* Button styling */
+.button-green {
+    background-color: var(--lime-green);
+    color: var(--electric-blue);
+    border: none;
+    cursor: pointer;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5;
+    border-radius: 5px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+/* Hover effect for buttons */
+.button-green:hover {
+    transform: translateY(-5px);
+}
+
+/* Inner span styling for emphasis */
+.button-green span {
+    display: block;
+    color: #4831D4; /* Darker color for emphasis */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+    .info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo {
+        max-width: 80px; /* Adjust logo size */
+    }
+    .button-green {
+        width: 100%; /* Full-width buttons */
+    }
+}
+
+
+/* Long Description Section */
+.long-description {
+    background-color: var(--electric-blue);
+    color: var(--white);
+    padding: 40px 20px;
+    text-align: justify;
+}
+
+.long-description p {
+    padding-bottom: 20px; /* Adds space below the paragraph */
+}
+
+/* Booth Carousel */
+.booth-carousel {
+    position: relative;
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    overflow: hidden;
+}
+
+.booth-carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.booth-carousel-slide {
+    position: relative;
+    min-width: 100%;
+    display: none;
+    padding: 100px 20px;
+    height: 200px;
+}
+
+.booth-carousel-slide:first-child {
+    display: block;
+}
+
+.booth-carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Image is below text */
+}
+
+.booth-carousel-controls button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--electric-blue);
+    color: var(--white);
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 2; /* Ensure the controls are above the image */
+}
+
+.booth-carousel-controls .prev {
+    left: 10px;
+}
+
+.booth-carousel-controls .next {
+    right: 10px;
+}
+
+.booth-carousel-dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.booth-carousel-dots button {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.booth-carousel-dots button.active {
+    background-color: var(--electric-blue); /* Active dot color */
+}
+
+.booth-carousel-dots button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Why Exhibit Section */
+.why-exhibit {
+    background-color: var(--white);
+    color: var(--electric-blue);
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.square-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between square items */
+    flex-wrap: wrap; /* Ensure proper wrapping on smaller screens */
+}
+
+.square-item {
+    text-align: center;
+    width: 300px; /* Matches the width of the square */
+}
+
+.square {
+    background-color: var(--lime-green);
+    color: var(--electric-blue);
+    display: inline-block;
+    width: 300px;
+    height: 150px;
+    margin: 10px auto; /* Centers the square within its container */
+    text-align: center;
+    line-height: 150px;
+    font-weight: bold;
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+.square-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--electric-blue);
+    text-align: center;
+    line-height: 1.4;
+}
+
+.logo-placeholder-exhibit {
+    position: absolute;
+    bottom: 10px; /* Distance from the bottom of the section */
+    right: 10px; /* Distance from the right side of the section */
+    width: 50px; /* Adjust as needed for the logo size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.logo-placeholder-exhibit img {
+    width: 100%; /* Ensures the image scales within the placeholder */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Programme section */
+/* Programme Section */
+.programmes {
+    text-align: center;
+    background-color: #d4f47c; /* Light green background */
+    padding: 30px;
+    font-family: Arial, sans-serif;
+}
+
+/* Individual Programme Container */
+.programme {
+    display: flex;
+    justify-content: space-between; /* Distribute blocks evenly */
+    align-items: center; /* Align vertically in the middle */
+    gap: 20px; /* Space between boxes */
+    margin: 20px auto; /* Space between each programme */
+    max-width: 900px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Programme Block (Boxes) */
+.programme-block {
+    background-color: #fff;
+    border: 2px solid #4b32e8;
+    color: #4b32e8;
+    font-weight: bold;
+    flex: 1; /* Ensures equal width for each block */
+    min-width: 150px; /* Minimum width */
+    max-width: 300px; /* Maximum width to keep it even */
+    height: 150px; /* Adjust the height to ensure content fits properly */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px; /* Padding inside each block */
+    box-sizing: border-box; /* Ensure padding is included in the element's total size */
+}
+
+/* Programme Details */
+.programme-details {
+    text-align: left;
+    color: #4b32e8;
+    line-height: 1.6;
+    font-size: 16px;
+    flex: 1; /* Ensure the details occupy available space inside the block */
+}
+
+/* Programme Buttons */
+.programme-buttons {
+    display: flex; /* Use flexbox to distribute the buttons evenly */
+    gap: 10px; /* Space between buttons */
+    margin-top: 30px;
+    justify-content: space-evenly; /* Evenly distribute buttons within the container */
+}
+
+.button-blue {
+    background-color: #4b32e8;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 45%; /* Set the width of the buttons to be equal */
+    max-width: 200px; /* Optional: Limit the maximum width for better control */
+}
+
+.button-blue:hover {
+    background-color: #3621c5;
+}
+
+
+/* Sponsors Section */
+.sponsors {
+    background-color: var(--white);
+    color: var(--electric-blue);
+    padding: 40px 20px;
+    position: relative; /* Enables absolute positioning for the top-right logo */
+}
+
+.logo-top-right {
+    position: absolute;
+    top: 10px; /* Distance from the top of the section */
+    right: 10px; /* Distance from the right side of the section */
+    width: 50px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.logo-top-right img {
+    width: 100%; /* Ensures the image scales within the placeholder */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+/* Sponsors Section */
+.supporting-orgs {
+    background-color: var(--white);
+    color: var(--electric-blue);
+    padding: 40px 20px;
+}
+
+/* Contact Us Section */
+.contact-us {
+    background-color: var(--lime-green);
+    color: var(--electric-blue);
+    padding: 40px 20px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--electric-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+}
