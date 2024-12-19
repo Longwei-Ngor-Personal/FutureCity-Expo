@@ -90,27 +90,28 @@ header {
 
 /* Media Query for Smaller Screens */
 @media screen and (max-width: 768px) {
-    /* Adjust font size for header content */
+    /* Adjust logo size */
     .header-top .logo-left img, .header-top .logo-right img {
-        max-width: 40%; /* Reduce logo size */
+        max-width: 35%; /* Further reduce logo size for better spacing */
     }
 
+    /* Adjust navigation font size */
     .header-bottom .nav-link {
-        font-size: 12px; /* Adjust font size */
+        font-size: 11px; /* Slightly smaller font for navigation links */
     }
 
+    /* Adjust contact info */
     .contact-info span {
-        font-size: 10px; /* Adjust font size for smaller screens */
-        margin-left: 5px;
+        font-size: 9px; /* Reduced font size to keep on one line */
+        margin-left: 5px; /* Further reduced margin */
         margin-right: 5px;
     }
 
     .social-icon {
-        width: 30px; /* Slightly smaller circle on small screens */
-        height: 30px; /* Ensure it's still a circle */
+        width: 25px; /* Smaller social icon */
+        height: 25px;
     }
 }
-
 
 /* Carousel */
 .carousel {
