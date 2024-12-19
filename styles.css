@@ -375,7 +375,6 @@ header {
     height: auto; /* Maintain aspect ratio */
 }
 
-/* Programme section */
 /* Programme Section */
 .programmes {
     text-align: center;
@@ -472,11 +471,18 @@ header {
 }
 
 
-/* Sponsors Section */
+/* Supporting Orgs Section */
 .supporting-orgs {
     background-color: var(--white);
     color: var(--electric-blue);
     padding: 40px 20px;
+    text-align: center; /* Center the content */
+}
+
+.org-logos img {
+    max-width: 100%;   /* Ensures the image takes the full available width */
+    height: auto;      /* Maintains the aspect ratio */
+    max-height: 80%;   /* Limits the height to 80% of its container */
 }
 
 /* Contact Us Section */
