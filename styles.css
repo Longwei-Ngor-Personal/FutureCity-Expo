@@ -71,7 +71,7 @@ header {
 
 /* Social Icon */
 .social-icon {
-    background-color: var(--white);
+    /* background-color: var(--white); */
     color: var(--electric-blue);
     border-radius: 50%;
     display: inline-block;
