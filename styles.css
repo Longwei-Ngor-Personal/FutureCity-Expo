@@ -543,6 +543,7 @@ header {
     background-color: var(--lime-green);
     color: var(--electric-blue);
     padding: 40px 20px;
+    font-weight: bold;
 }
 
 /* Footer */
