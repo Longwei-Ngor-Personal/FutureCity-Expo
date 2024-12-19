@@ -24,40 +24,79 @@ header {
     padding: 20px;
 }
 
+/* Header Top Section */
 .header-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* Separator */
 .header-separator {
     height: 2px;
     background-color: var(--white);
     margin: 10px 0;
 }
 
+/* Header Bottom Section */
 .header-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* Navigation Links */
 .nav-link {
     color: var(--white);
     text-decoration: none;
     font-weight: bold;
 }
 
+/* Contact Info */
 .contact-info span {
     margin-left: 10px;
     color: var(--white);
 }
 
+/* Social Icon */
 .social-icon {
     background-color: var(--white);
     color: var(--electric-blue);
     padding: 5px;
     border-radius: 50%;
+    display: inline-block;
+    width: 40px; /* Ensures a circle */
+    height: 40px; /* Ensures a circle */
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Ensure the image inside the social icon remains a perfect circle */
+.social-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+    /* Adjust font size for header content */
+    .header-top .logo-left img, .header-top .logo-right img {
+        max-width: 40%;  /* Reduce logo size */
+    }
+
+    .header-bottom .nav-link {
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .contact-info span {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+
+    .social-icon {
+        width: 35px; /* Slightly smaller circle on small screens */
+        height: 35px; /* Ensure it's still a circle */
+    }
 }
 
 /* Carousel */
@@ -476,7 +515,7 @@ header {
     background-color: var(--white);
     color: var(--electric-blue);
     padding: 40px 20px;
-    text-align: center; /* Center the content */
+    text-align: left; 
 }
 
 .org-logos img {
