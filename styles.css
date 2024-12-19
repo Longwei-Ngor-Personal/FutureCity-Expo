@@ -79,7 +79,7 @@ header {
 }
 
 /* Media Query for Smaller Screens */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     /* Adjust font size for header content */
     .header-top .logo-left img, .header-top .logo-right img {
         max-width: 40%;  /* Reduce logo size */
