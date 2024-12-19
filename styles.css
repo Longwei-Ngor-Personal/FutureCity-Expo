@@ -86,11 +86,11 @@ header {
     }
 
     .header-bottom .nav-link {
-        font-size: 14px; /* Adjust font size */
+        font-size: 12px; /* Adjust font size */
     }
 
     .contact-info span {
-        font-size: 12px; /* Adjust font size for smaller screens */
+        font-size: 10px; /* Adjust font size for smaller screens */
     }
 
     .social-icon {
