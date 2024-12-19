@@ -101,6 +101,8 @@ header {
 
     .contact-info span {
         font-size: 10px; /* Adjust font size for smaller screens */
+        margin-left: 5px;
+        margin-right: 5px;
     }
 
     .social-icon {
