@@ -50,28 +50,38 @@ header {
     color: var(--white);
     text-decoration: none;
     font-weight: bold;
+    font-size: 16px;
 }
 
 /* Contact Info */
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
 .contact-info span {
     margin-left: 10px;
     color: var(--white);
+}
+
+.contact-info span:first-child {
+    margin-left: 0;
+    margin-right: 15px;
 }
 
 /* Social Icon */
 .social-icon {
     background-color: var(--white);
     color: var(--electric-blue);
-    padding: 5px;
     border-radius: 50%;
     display: inline-block;
-    width: 40px; /* Ensures a circle */
-    height: 40px; /* Ensures a circle */
+    width: 40px;
+    height: 40px;
     overflow: hidden;
     text-align: center;
+    margin-left: 15px;
 }
 
-/* Ensure the image inside the social icon remains a perfect circle */
 .social-icon img {
     width: 100%;
     height: 100%;
@@ -82,7 +92,7 @@ header {
 @media screen and (max-width: 768px) {
     /* Adjust font size for header content */
     .header-top .logo-left img, .header-top .logo-right img {
-        max-width: 40%;  /* Reduce logo size */
+        max-width: 40%; /* Reduce logo size */
     }
 
     .header-bottom .nav-link {
@@ -94,10 +104,11 @@ header {
     }
 
     .social-icon {
-        width: 35px; /* Slightly smaller circle on small screens */
-        height: 35px; /* Ensure it's still a circle */
+        width: 30px; /* Slightly smaller circle on small screens */
+        height: 30px; /* Ensure it's still a circle */
     }
 }
+
 
 /* Carousel */
 .carousel {
