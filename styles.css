@@ -284,94 +284,155 @@ header {
 .long-description {
     background-color: var(--electric-blue);
     color: var(--white);
-    padding: 40px 20px;
-    text-align: justify;
+    padding: 40px 0; /* Full-width background */
 }
 
-.long-description p {
-    padding-bottom: 20px; /* Adds space below the paragraph */
+.long-description-content {
+    max-width: 1000px; /* Limit content width for better readability */
+    margin: 0 auto; /* Center the text horizontally */
+    padding: 0 5%; /* Add responsive horizontal padding */
+    text-align: justify;
+    line-height: 1.8; /* Improve text readability */
+    font-size: 16px;
 }
 
 /* Booth Carousel */
 .booth-carousel {
     position: relative;
-    background-color: var(--black);
-    color: var(--white);
-    text-align: center;
     overflow: hidden;
+    padding: 40px 0; /* Matches the spacing of the section */
 }
 
 .booth-carousel-container {
+    max-width: 800px; /* Match the text content width */
+    margin: 0 auto; /* Center the carousel horizontally */
     display: flex;
     transition: transform 0.5s ease-in-out;
+    height: 400px; /* Set a uniform height for all slides */
 }
 
 .booth-carousel-slide {
-    position: relative;
-    min-width: 100%;
-    display: none;
-    padding: 100px 20px;
-    height: 200px;
+    flex: 0 0 100%; /* Each slide takes full width */
+    display: none; /* Hide all slides except active */
 }
 
 .booth-carousel-slide:first-child {
-    display: block;
+    display: block; /* Show the first slide by default */
 }
 
-.booth-carousel-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; /* Image is below text */
+.booth-carousel-image {
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Match the container height */
+    object-fit: cover; /* Ensures images are cropped proportionally */
+    display: block; /* Prevent inline spacing issues */
 }
 
-.booth-carousel-controls button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: var(--electric-blue);
-    color: var(--white);
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 2; /* Ensure the controls are above the image */
-}
-
-.booth-carousel-controls .prev {
-    left: 10px;
-}
-
-.booth-carousel-controls .next {
-    right: 10px;
-}
-
+/* Carousel Dots */
 .booth-carousel-dots {
     text-align: center;
     margin-top: 10px;
 }
 
-.booth-carousel-dots button {
-    background-color: rgba(0, 0, 0, 0.5);
+.booth-dot {
+    background-color: rgba(255, 255, 255, 0.5);
     width: 15px;
     height: 15px;
     border-radius: 50%;
     border: none;
     cursor: pointer;
+    margin: 0 5px;
     transition: background-color 0.3s ease;
 }
 
-.booth-carousel-dots button.active {
-    background-color: var(--electric-blue); /* Active dot color */
+.booth-dot.active {
+    background-color: var(--electric-blue);
 }
 
-.booth-carousel-dots button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+.booth-dot:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}/* Booth Carousel */
+.booth-carousel {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0; /* Vertical padding for consistent spacing */
+    background-color: var(--electric-blue); /* Matches the section background */
 }
 
+.booth-carousel-container {
+    max-width: 800px; /* Limit carousel width on large screens */
+    margin: 0 auto; /* Center carousel horizontally */
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 400px; /* Set a uniform height for all slides */
+}
+
+.booth-carousel-slide {
+    flex: 0 0 100%; /* Each slide takes full width */
+    display: none; /* Hide all slides except the active one */
+}
+
+.booth-carousel-slide:first-child {
+    display: block; /* Show the first slide by default */
+}
+
+.booth-carousel-image {
+    width: 100%; /* Images scale to fit container width */
+    height: 100%; /* Match the container height */
+    object-fit: cover; /* Crop images proportionally to fill the space */
+    display: block; /* Prevent inline spacing issues */
+}
+
+/* Carousel Dots */
+.booth-carousel-dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.booth-dot {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.booth-dot.active {
+    background-color: var(--white); /* Highlight active dot */
+}
+
+.booth-dot:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Adjustments for Booth Carousel */
+@media screen and (max-width: 768px) {
+    .booth-carousel-container {
+        height: 300px; /* Adjust height for tablets */
+    }
+
+    .booth-carousel-image {
+        object-fit: contain; /* Prevent excessive cropping on smaller screens */
+    }
+
+    .booth-dot {
+        width: 12px;
+        height: 12px; /* Adjust dot size */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .booth-carousel-container {
+        height: 250px; /* Smaller height for compact screens */
+    }
+
+    .booth-dot {
+        width: 10px;
+        height: 10px; /* Smaller dots for compact screens */
+    }
+}
 
 /* Why Exhibit Section */
 .why-exhibit {
@@ -447,6 +508,15 @@ header {
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
+/* Programme Heading */
+.programmes h2 {
+    text-align: left; /* Align text to the left */
+    margin: 0 auto; /* Automatically center the heading */
+    color: #4b32e8; /* Match the box color scheme */
+    margin-bottom: 20px; /* Space below the heading */
+    max-width: 900px; /* Ensure the heading does not stretch beyond the container width */
+}
+
 /* Programme Block (Boxes) */
 .programme-block {
     background-color: #fff;
@@ -499,8 +569,7 @@ header {
 
 .button-blue:hover {
     background-color: #3621c5;
-}
-
+}   
 
 /* Sponsors Section */
 .sponsors {
@@ -508,6 +577,14 @@ header {
     color: var(--electric-blue);
     padding: 40px 20px;
     position: relative; /* Enables absolute positioning for the top-right logo */
+}
+
+.sponsors h2 {
+    text-align: left; /* Align text to the left */
+    margin: 0 auto; /* Automatically center the heading */
+    color: #4b32e8; /* Match the box color scheme */
+    margin-bottom: 20px; /* Space below the heading */
+    max-width: 900px; /* Ensure the heading does not stretch beyond the container width */
 }
 
 .logo-top-right {
@@ -532,6 +609,14 @@ header {
     text-align: left; 
 }
 
+.supporting-orgs h2 {
+    text-align: left; /* Align text to the left */
+    margin: 0 auto; /* Automatically center the heading */
+    color: #4b32e8; /* Match the box color scheme */
+    margin-bottom: 20px; /* Space below the heading */
+    max-width: 900px; /* Ensure the heading does not stretch beyond the container width */
+}
+
 .org-logos img {
     max-width: 100%;   /* Ensures the image takes the full available width */
     height: auto;      /* Maintains the aspect ratio */
@@ -544,6 +629,22 @@ header {
     color: var(--electric-blue);
     padding: 40px 20px;
     font-weight: bold;
+}
+
+.contact-us h2{
+    text-align: left; /* Align text to the left */
+    margin: 0 auto; /* Automatically center the heading */
+    color: #4b32e8; /* Match the box color scheme */
+    margin-bottom: 20px; /* Space below the heading */
+    max-width: 900px; /* Ensure the heading does not stretch beyond the container width */
+}
+.contact-us p{
+    text-align: left; /* Align text to the left */
+    margin: 0 auto; /* Automatically center the heading */
+    color: #4b32e8; /* Match the box color scheme */
+    margin-top: 20px;
+    margin-bottom: 20px; /* Space below the lines */
+    max-width: 900px; /* Ensure the heading does not stretch beyond the container width */
 }
 
 /* Footer */
