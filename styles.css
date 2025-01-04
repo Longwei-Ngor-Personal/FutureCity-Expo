@@ -654,3 +654,17 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
+footer h2{
+    text-align: left; /* Align text to the left */
+    margin: 0 auto; /* Automatically center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    max-width: 900px; /* Ensure the heading does not stretch beyond the container width */
+}
+
+footer p{
+    text-align: left; /* Align text to the left */
+    margin: 0 auto; /* Automatically center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    max-width: 900px; /* Ensure the heading does not stretch beyond the container width */
+}
