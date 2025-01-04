@@ -659,16 +659,24 @@ footer {
     padding: 20px;
 }
 
-footer h2{
+footer h2 {
     text-align: left; /* Align text to the left */
     margin: 0 auto; /* Automatically center the heading */
     margin-bottom: 20px; /* Space below the heading */
     max-width: 900px; /* Ensure the heading does not stretch beyond the container width */
 }
 
-footer p{
-    text-align: left; /* Align text to the left */
-    margin: 0 auto; /* Automatically center the heading */
-    margin-bottom: 20px; /* Space below the heading */
-    max-width: 900px; /* Ensure the heading does not stretch beyond the container width */
+footer .logo-placeholder img {
+    max-width: 40%; /* Limit the image width */
+    height: auto;
+    margin-left: -25%; /* Adjust the position slightly to the left */
 }
+
+/* Footer p */
+footer p {
+    text-align: left; /* Align text to the left */
+    margin: 0 auto; /* Automatically center the text */
+    margin-bottom: 20px; /* Space below the text */
+    max-width: 900px; /* Ensure the text does not stretch beyond the container width */
+}
+
