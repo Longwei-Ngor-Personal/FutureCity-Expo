@@ -288,7 +288,7 @@ header {
 }
 
 .long-description-content {
-    max-width: 1000px; /* Limit content width for better readability */
+    max-width: 920px; /*Limit content width for better readability*/
     margin: 0 auto; /* Center the text horizontally */
     padding: 0 5%; /* Add responsive horizontal padding */
     text-align: justify;
