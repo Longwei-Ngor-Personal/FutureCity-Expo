@@ -660,21 +660,16 @@ footer {
 }
 
 footer h3 {
-    text-align: left; /* Align text to the left */
+    text-align: center; /* Align text to the center */
     margin: 0 auto; /* Automatically center the heading */
     margin-bottom: 20px; /* Space below the heading */
     max-width: 900px; /* Ensure the heading does not stretch beyond the container width */
 }
 
-footer .logo-placeholder img {
-    max-width: 40%; /* Limit the image width */
-    height: auto;
-    margin-left: -25%; /* Adjust the position slightly to the left */
-}
-
 /* Footer p */
 footer p {
-    text-align: left; /* Align text to the left */
+    text-align: center; /* Align text to the center */
+    font-size: 12px;
     margin: 0 auto; /* Automatically center the text */
     margin-bottom: 20px; /* Space below the text */
     max-width: 900px; /* Ensure the text does not stretch beyond the container width */
