@@ -1,16 +1,39 @@
 /* General Reset */
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif; /* Replace with your brand's font */
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333; /* Replace with your brand's color */
+    color: #333;
 }
 
 .header {
-    background-color: #4b32e8; /* Replace with your brand's primary color */
-    color: #fff;
+    background-color: #4731D4; /* Primary color */
     text-align: center;
     padding: 20px 0;
+}
+
+.header-logo img {
+    max-width: 80%; /* Ensure the image scales for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    display: inline-block;
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+    .header-logo img {
+        max-width: 30%; /* Moderate size for small tablets */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .header-logo img {
+        max-width: 35%; /* Smaller size for tablets and small desktops */
+    }
+}
+
+@media (min-width: 1200px) {
+    .header-logo img {
+        max-width: 40%; /* Slightly larger for very large screens */
+    }
 }
 
 .content {
