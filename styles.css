@@ -553,23 +553,36 @@ header {
     justify-content: space-evenly; /* Evenly distribute buttons within the container */
 }
 
+/* Button styling */
 .button-blue {
     background-color: #4b32e8;
     color: #fff;
-    padding: 10px 20px;
-    font-size: 14px;
+    padding: 15px 20px; /* Match padding with green button */
+    font-size: 16px; /* Match font size with green button */
     font-weight: bold;
-    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5; /* Match line height with green button */
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 45%; /* Set the width of the buttons to be equal */
-    max-width: 200px; /* Optional: Limit the maximum width for better control */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+    transition: transform 0.2s ease, background-color 0.3s ease; /* Smooth animation */
 }
 
+/* Hover effect for buttons */
 .button-blue:hover {
-    background-color: #3621c5;
-}   
+    transform: translateY(-5px); /* Add hover effect for movement */
+    background-color: #3621c5; /* Slightly darker blue on hover */
+}
+
+/* Inner span styling for emphasis */
+.button-blue span {
+    display: block;
+    color: #fff; /* Keep text color white */
+    font-size: 18px; /* Match size with green button span */
+    font-weight: bold;
+}
+   
 
 /* Sponsors Section */
 .sponsors {
