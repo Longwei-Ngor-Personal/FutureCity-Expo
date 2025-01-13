@@ -1,0 +1,61 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif; /* Replace with your brand's font */
+    line-height: 1.6;
+    color: #333; /* Replace with your brand's color */
+}
+
+.header {
+    background-color: #4b32e8; /* Replace with your brand's primary color */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.welcome h2 {
+    color: #4b32e8;
+    border-bottom: 2px solid #4b32e8;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.exhibitors h2 {
+    color: #4b32e8;
+    border-bottom: 2px solid #4b32e8;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.exhibitor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.exhibitor {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.exhibitor .logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 10px;
+    background-color: #4b32e8;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 14px;
+}
